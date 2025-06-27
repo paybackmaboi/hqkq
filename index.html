@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISLIP - Disaster Preparedness Dashboard</title>
+    <!-- Link to our shared stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1><i class="fas fa-shield-alt"></i> LISLIP</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="map.html">Live Map</a></li>
+                <li><a href="prep-kit.html">Prep-Kit</a></li>
+                <li><a href="hotlines.html">Hotlines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <div class="page-title">
+            <h2>Disaster Alert Dashboard</h2>
+            <p>Live updates for Bacolod City, Philippines</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Main Typhoon Alert Card (will be filled by MOCK data) -->
+            <div id="typhoon-alert-card" class="alert-card-large">
+                <div class="loader">Fetching weather status...</div>
+            </div>
+
+            <!-- Side Cards for other alerts -->
+            <div class="side-cards">
+                <!-- Earthquake Alert Card (will be filled by LIVE data) -->
+                <div id="earthquake-alert-card" class="sub-alert-card">
+                    <div class="loader">Fetching seismic data...</div>
+                </div>
+
+                <!-- Static Flood Alert Card -->
+                <div id="flood-alert-card" class="sub-alert-card">
+                    <div class="icon" style="color: #3498db;"><i class="fas fa-tint"></i></div>
+                    <div class="content">
+                        <p><strong>Flood Alert</strong></p>
+                        <p>No large-scale flood warnings reported.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 LISLIP Project. A Hackathon Entry for Social Good.</p>
+    </footer>
+
+    <!-- Link to our shared JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

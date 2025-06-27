@@ -1,0 +1,281 @@
+/* --- General Styles & Variables --- */
+:root {
+    --primary-color: #005A9C; /* A strong blue */
+    --secondary-color: #00A4E4; /* A lighter blue */
+    --accent-color: #FFC425; /* A vibrant yellow */
+    --text-color: #333;
+    --bg-color: #f4f7f9;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .logo h1 {
+    margin: 0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* --- Main Content & Footer --- */
+.content-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.page-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.page-title p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #e9ecef;
+    color: #666;
+    margin-top: 2rem;
+}
+
+/* --- Dashboard Page Styles --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.alert-card-large {
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease;
+}
+.alert-card-large h2 { margin-top: 0; font-size: 2.5rem; display: flex; align-items: center; gap: 1rem; }
+.alert-card-large p { font-size: 1.1rem; line-height: 1.5; }
+
+.side-cards { display: flex; flex-direction: column; gap: 2rem; }
+
+.sub-alert-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.sub-alert-card .icon { font-size: 2rem; }
+.sub-alert-card .content p { margin: 0; font-size: 0.9rem; color: #555; }
+.sub-alert-card .content p strong { color: #333; font-size: 1.1rem; display: block; margin-bottom: 5px; }
+
+/* Status Colors */
+.status-safe { background-color: #2ecc71; }
+.status-warning { background-color: #f1c40f; color: #333; }
+.status-danger { background-color: #e74c3c; }
+.status-info { background-color: #3498db; }
+.loader { text-align: center; padding: 20px; font-size: 1em; color: #777; }
+
+/* --- Map Page Styles --- */
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Prep-Kit Page Styles --- */
+.prep-kit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.checklist-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.checklist-card h3 { display: flex; align-items: center; gap: 10px; margin-top: 0; }
+.checklist-card ul { list-style: none; padding: 0; }
+.checklist-card li { margin-bottom: 1rem; display: flex; align-items: center; }
+.checklist-card input[type="checkbox"] { margin-right: 10px; width: 18px; height: 18px; }
+.checklist-card label { user-select: none; } /* Prevents text selection on click */
+
+/* --- Hotlines Page Styles --- */
+.hotlines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.hotline-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.hotline-card h3 { margin-top: 0; color: var(--primary-color); }
+.hotline-card p { font-size: 1.5rem; font-weight: 500; margin: 0.5rem 0 1rem; }
+.hotline-card .call-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.hotline-card .call-btn:hover { background-color: var(--secondary-color); }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .dashboard-grid, .prep-kit-grid {
+        grid-template-columns: 1fr;
+    }
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* --- Add these new styles to your existing style.css file --- */
+
+/* --- AI Advisor Card Styles --- */
+.ai-advice-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 90, 156, 0.2);
+}
+
+.ai-advice-card h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ai-advice-card p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.ai-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+#ai-prompt-input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+}
+#ai-prompt-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+#get-advice-btn {
+    background-color: var(--accent-color);
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#get-advice-btn:hover {
+    background-color: #ffd450;
+    transform: translateY(-2px);
+}
+
+#ai-response-area {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-height: 50px;
+    line-height: 1.6;
+}
+
+/* AI response loader style */
+#ai-response-area .ai-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#ai-response-area .ai-loader::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.5);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
