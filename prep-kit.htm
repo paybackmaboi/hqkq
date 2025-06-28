@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prep-Kit - LISLIP</title>
-    <!-- Link to our shared stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,8 +17,10 @@
             <ul>
                 <li><a href="index.html">Dashboard</a></li>
                 <li><a href="map.html">Live Map</a></li>
-                <li><a href="prep-kit.html" class="active">Prep-Kit</a></li>
+                <li><a href="prep-kit.htm" class="active">Prep-Kit</a></li>
                 <li><a href="hotlines.html">Hotlines</a></li>
+                <li><a href="first-aid.html">First-Aid</a></li>
+                <li><a href="family-plan.html">Family Plan</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +31,6 @@
             <p>Use our checklists and AI Advisor to get ready for any situation.</p>
         </div>
 
-        <!-- Gemini AI Advisor Card -->
         <div class="ai-advice-card">
             <h3><i class="fas fa-brain"></i> AI-Powered Preparedness Advisor</h3>
             <p>Have a specific question? Ask our AI for personalized advice. For example: "How do I prepare for a flood if I have pets?"</p>
@@ -40,8 +39,15 @@
                 <button id="get-advice-btn">Get Advice</button>
             </div>
             <div id="ai-response-area">
-                <!-- AI-generated advice will appear here -->
-            </div>
+                </div>
+        </div>
+        
+        <div class="quick-alert-card">
+            <h3><i class="fas fa-bullhorn"></i> Quick Alerts</h3>
+            <p>Quickly notify your pre-defined emergency contacts that you are safe.</p>
+            <button id="iam-safe-btn" class="action-btn">
+                <i class="fas fa-check-circle"></i> Send "I Am Safe" Notification
+            </button>
         </div>
 
 
@@ -80,7 +86,6 @@
         <p>&copy; 2024 LISLIP Project. A Hackathon Entry for Social Good.</p>
     </footer>
 
-    <!-- Link to our shared JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
